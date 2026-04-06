@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 214 85% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 92% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --brand-orange: 36 90% 55%;
+    --brand-blue: 214 85% 52%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 214 85% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 214 85% 52%;
+
+    --radius: 0.75rem;
+
+    --glass-bg: 220 20% 12% / 0.6;
+    --glass-border: 0 0% 100% / 0.08;
+    --glass-highlight: 0 0% 100% / 0.04;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 214 85% 52%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 214 85% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  .glass-strong {
+    background: hsl(220 20% 12% / 0.8);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid hsl(0 0% 100% / 0.12);
+  }
+
+  .glass-subtle {
+    background: hsl(220 20% 12% / 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(0 0% 100% / 0.05);
+  }
+
+  .glass-purple {
+    position: relative;
+    background: hsla(220, 20%, 14%, 0.7);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid hsla(280, 92%, 51%, 0.12);
+    overflow: hidden;
+  }
+
+  .glass-purple::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: 10%;
+    right: 10%;
+    height: 120%;
+    background: radial-gradient(ellipse at center top, hsla(280, 92%, 51%, 0.35) 0%, hsla(280, 92%, 60%, 0.15) 30%, hsla(260, 80%, 50%, 0.05) 60%, transparent 80%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .glass-purple > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 30px hsl(214 85% 52% / 0.15), 0 0 60px hsl(214 85% 52% / 0.05);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 30px hsl(280 92% 51% / 0.2), 0 0 60px hsl(280 92% 51% / 0.08);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, hsl(214 85% 52%), hsl(280 92% 51%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(circle, hsl(0 0% 100% / 0.18) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

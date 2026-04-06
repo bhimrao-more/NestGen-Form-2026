@@ -2,8 +2,8 @@
 
 /* ============================================
    FlytBase Brand Tokens
-   These are inherited from the main FlytBase website.
    Brand Guide: 60% Primary Dark / 40% Blue
+   + NestGen Forum design system
    ============================================ */
 
 @theme inline {
@@ -29,6 +29,12 @@
   --color-secondary-200: #AABDFF;
   --color-secondary-100: #D6E4FF;
   --color-secondary-50: #EBF2FF;
+
+  /* --- Brand Orange (CTA accent) --- */
+  --color-brand-orange: #E8A020;
+
+  /* --- Purple accent --- */
+  --color-purple-500: #8B5FFF;
 
   /* --- Accent (lighter blue for emphasis) --- */
   --color-accent-500: #5A9AF5;
@@ -97,13 +103,20 @@
   --gradient-brand: linear-gradient(135deg, #AABDFF 0%, #0B121E 100%);
   --gradient-blue: linear-gradient(180deg, #2C7BF2 0%, #0E61DD 100%);
   --gradient-dark: linear-gradient(180deg, #1A212D 0%, #0B121E 100%);
+
+  /* --- Animations --- */
+  --animate-filmstrip-scroll: filmstrip-scroll 30s linear infinite;
 }
 
 /* --- Base --- */
 body {
-  background-color: var(--color-primary-900);
+  background-color: var(--color-primary-950);
   color: var(--color-primary-100);
   font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* --- Display headings (use these classes, NOT text-display-*) ---
@@ -146,7 +159,79 @@ body {
   .display-md { font-size: 2.5rem; }
 }
 
-/* --- Smooth scroll --- */
-html {
-  scroll-behavior: smooth;
+/* --- Glass Morphism --- */
+.glass {
+  background: hsl(220 20% 12% / 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsl(0 0% 100% / 0.08);
+}
+
+.glass-strong {
+  background: hsl(220 20% 12% / 0.8);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid hsl(0 0% 100% / 0.12);
+}
+
+.glass-subtle {
+  background: hsl(220 20% 12% / 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsl(0 0% 100% / 0.05);
+}
+
+.glass-purple {
+  position: relative;
+  background: hsla(220, 20%, 14%, 0.7);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid hsla(280, 92%, 51%, 0.12);
+  overflow: hidden;
+}
+
+.glass-purple::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: 10%;
+  right: 10%;
+  height: 120%;
+  background: radial-gradient(ellipse at center top, hsla(280, 92%, 51%, 0.35) 0%, hsla(280, 92%, 60%, 0.15) 30%, hsla(260, 80%, 50%, 0.05) 60%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass-purple > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Gradient Text --- */
+.text-gradient {
+  background: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 70%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Glow Effects --- */
+.glow-primary {
+  box-shadow: 0 0 30px hsl(214 85% 52% / 0.15), 0 0 60px hsl(214 85% 52% / 0.05);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 30px hsl(280 92% 51% / 0.2), 0 0 60px hsl(280 92% 51% / 0.08);
+}
+
+/* --- Dot Pattern --- */
+.dot-pattern {
+  background-image: radial-gradient(circle, hsl(0 0% 100% / 0.18) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* --- Filmstrip Scroll Animation --- */
+@keyframes filmstrip-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

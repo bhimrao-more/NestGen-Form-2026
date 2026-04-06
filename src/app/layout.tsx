@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { Toaster } from "sonner";
 import { inter, plusJakarta } from "@/lib/fonts";
 import "./globals.css";
 
-// ✏️ UPDATE: Change these for your event
 export const metadata: Metadata = {
-  title: "Event Name 2026 | FlytBase",
-  description: "Join FlytBase at Event Name 2026. Description of your event goes here.",
+  title: "NestGen Forum '26 | FlytBase",
+  description:
+    "NestGen Forum is an exclusive invite-only gathering for drone pioneers. May 11, 2026 in Detroit, MI. Pioneering AI-First Drone Autonomy for Scale.",
   openGraph: {
-    title: "Event Name 2026 | FlytBase",
-    description: "Join FlytBase at Event Name 2026.",
+    title: "NestGen Forum '26 | FlytBase",
+    description:
+      "Exclusive invite-only gathering for drone pioneers. May 11, 2026 in Detroit, MI.",
     siteName: "FlytBase",
     type: "website",
   },
@@ -21,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Toaster theme="dark" position="bottom-right" richColors />
+      </body>
     </html>
   );
 }

@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "requestInvite": "Solicitar Invitación"
+  },
+  "hero": {
+    "date": "11 de mayo de 2026",
+    "location": "Detroit, MI",
+    "time": "8am – 4pm",
+    "inviteOnly": "Solo con Invitación",
+    "title": "NestGen Forum '26",
+    "tagline": "Pioneros en Autonomía de Drones con IA para Escalar",
+    "requestInvite": "Solicitar Invitación",
+    "description": "NestGen Forum es una reunión exclusiva solo por invitación para pioneros de drones que enfrentan los problemas más difíciles en la escalabilidad de operaciones de estaciones. Despliegue multi-sitio, justificación del ROI, navegación regulatoria, integración de IA y la transición de pilotos a infraestructura empresarial. Estas conversaciones dieron forma a NestGen Retreat. Esta cumbre lleva ese mismo calibre de conversación a AUVSI en un día enfocado. Curada. Impulsada por pares. Sustancia sobre espectáculo."
+  },
+  "agenda": {
+    "label": "Qué Está Pasando",
+    "heading1": "Marcos profundos para líderes.",
+    "heading2": "Producto práctico para operadores.",
+    "opening": {
+      "title": "Apertura: Construyendo el Sistema Nervioso de las Operaciones Autónomas",
+      "desc": "El panorama estratégico: cómo la escalabilidad de estaciones y la inteligencia impulsada por IA están convergiendo para transformar las operaciones autónomas de drones."
+    },
+    "visionary": {
+      "trackTitle": "Track Visionario",
+      "items": [
+        {
+          "title": "Construyendo el Manual de ROI que Escala",
+          "desc": "Marcos de casos de negocio y modelos de precios que logran que el liderazgo empresarial financie y expanda programas de drones."
+        },
+        {
+          "title": "De Piloto a Estaciones como Infraestructura",
+          "desc": "Por qué los programas de un solo departamento se estancan y cómo la adopción multi-departamental cambia toda la ecuación de inversión."
+        },
+        {
+          "title": "La IA como Palanca de Negocio",
+          "desc": "Cómo la IA cambia la propuesta de valor de la recopilación de datos a inteligencia accionable."
+        },
+        {
+          "title": "ROC y Cambio al Modelo de Negocio Basado en Resultados",
+          "desc": "Externalización de operaciones, escalado a través de servicios gestionados y fijación de precios por resultados en lugar de vuelos."
+        }
+      ]
+    },
+    "operator": {
+      "trackTitle": "Track Operador",
+      "items": [
+        {
+          "title": "Diseñando el ROC para Escala Multi-Sitio",
+          "desc": "Gestión de flotas, operaciones de uno a muchos y qué se rompe cuando escalas más allá de unos pocos sitios."
+        },
+        {
+          "title": "Más Allá del Vuelo hacia Resultados Impulsados por IA",
+          "desc": "Detección automatizada, seguimiento de cambios, búsqueda forense e informes generados por IA en operaciones diarias."
+        },
+        {
+          "title": "Estrategias BVLOS que Realmente Funcionan",
+          "desc": "Construye la tuya, asóciate bajo marcos existentes o conviértelo en un criterio de proveedor."
+        },
+        {
+          "title": "Seguridad de Datos, H/W y Decisiones de Cumplimiento",
+          "desc": "Compromisos entre nube y local, modelos soberanos y navegación de opciones de hardware en un panorama cambiante."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Cierre: Dónde Convergen la IA y la Autonomía de Drones",
+      "desc": "Una mirada al futuro de lo que sucede cuando las estaciones autónomas, la IA y la robótica terrestre se fusionan en una capa de inteligencia."
+    }
+  },
+  "tracks": {
+    "label": "Quién Debería Unirse",
+    "heading1": "Construido para empresas y",
+    "heading2": "proveedores de soluciones",
+    "description": "NestGen Forum reúne a líderes de programas de drones empresariales y proveedores de soluciones de drones. Elige el track que coincida con cómo pasas tu día.",
+    "visionary": {
+      "name": "Track Visionario",
+      "audience": "Para CEOs, Directores de Programa, Jefes de Innovación",
+      "description": "¿Estás construyendo el caso de negocio, eligiendo socios, definiendo estrategia o liderando la organización que ofrece servicios autónomos de drones? Este track es para ti."
+    },
+    "operator": {
+      "name": "Track Operador",
+      "audience": "Operadores de programas de drones, Gerentes de ROC, Equipos de Campo, Piloto al Mando",
+      "description": "¿Gestionas vuelos, mantienes estaciones, navegas el espacio aéreo, escalas sitios o diriges un centro de operaciones remotas? Este track es para ti."
+    }
+  },
+  "form": {
+    "label": "Solicitar Invitación",
+    "heading": "Un día lleno de energía antes de AUVSI Xponential.",
+    "description": "Sin relleno, sin discursos de ventas. Los asientos son limitados y asignados por invitación. Precio: USD 1,999.",
+    "name": "Nombre",
+    "company": "Empresa",
+    "title": "Título",
+    "email": "Correo electrónico",
+    "selectTrack": "Seleccionar Track",
+    "visionaryTrack": "Track Visionario",
+    "operatorTrack": "Track Operador",
+    "challenge": "¿Cuál es el mayor desafío de escalabilidad que enfrentas ahora mismo?",
+    "submit": "Solicitar una Invitación",
+    "submitting": "Enviando...",
+    "success": "¡Solicitud de invitación enviada con éxito!",
+    "error": "Error al enviar. Por favor, inténtalo de nuevo."
+  },
+  "gallery": {
+    "label": "Eventos Pasados",
+    "heading": "Momentos del NestGen Retreat"
+  },
+  "footer": {
+    "initiative": "una iniciativa de",
+    "copyright": "© 2026 NestGen Forum. Todos los derechos reservados."
+  }
+}
